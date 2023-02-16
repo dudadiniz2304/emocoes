@@ -1,0 +1,85 @@
+ 
+<html>
+    <head>
+      <title>Emoção Em Emoji</title>
+      <!--bootstrap -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <!--para gente conseguir fazer todo o treinamento  -->
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <!--webcam  -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+      <!--é para pegar todo codigo do css  -->
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+  
+    <body>
+    <div class="container">
+    
+      <center>
+        <!-- insira texto e emojis aqui -->
+        <h3 class="btn btn-warning heading">
+          app Emoção em emojis 
+          <br>
+          <span style='font-size:100px;'>&#128561;</span>
+          <span style='font-size:100px;'>&#128540;</span>
+          <span style='font-size:100px;'>&#128526;</span>
+          <span style='font-size:100px;'>&#129300;</span>
+          <span style='font-size:100px;'>&#129325;</span>
+
+        </h3>
+
+        <br><br>
+  
+        <p style="font-size: 22px;">Tire sua selfie para gerar o emoji
+            <br>
+            <!-- insira as cores -->
+          <b style="color:rgb(255, 94, 0) ">Você está Feliz?</b>
+          <br>
+          <b style="color:blue ">Você está Triste?</b>
+          <br>
+          <b style="color:red ">Você está Irritado?</b>
+          <br>
+        </p>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Visualização da Webcam:</label>
+            <div id="camera"></div>
+            <br><br>
+            <!-- insira o nome da função -->
+            <button onclick="takeSnapshot()" class="btn btn-warning">Capturar Imagem</button>
+        </div>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <!-- legenda de previsão -->
+            <label>previsão 1:</label>
+            <p class="emotionName" id="resultEmotionName"></p>
+            <p class="emoji" id="updateEmoji"></p>
+  
+            <!-- legenda de previsão -->
+            <label>previsão 2:</label>
+            <p class="emotionName" id="resultEmotionName2"></p>
+            <p class="emoji" id="updateEmoji2"></p>
+          </div>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Foto: </label>
+            <div id="result"></div>
+            <br><br>
+            <!-- insira o nome da função -->
+            
+            <button onclick="check()" class="btn btn-success">Prever Emoção</button>
+           </div>
+  
+      </center>
+  
+    </div>
+  <!-- ele vai pegar todo o código do js -->
+  <script src="main.js"></script>
+  
+    </body>
+  </html>
+  
+   
